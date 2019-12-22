@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.pyc
+*/__pycache__/
+media/
+*.sqlite3
+*.sqlite3-journal
+*/migrations/
+imports/
+local_settings.py
+for_agents/

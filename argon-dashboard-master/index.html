@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Simulation by Atabay and Zhanik
+  </title>
+  <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <link href="./assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="./assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-1 pt-md-4">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <div class="row">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="h3 card-title text-uppercase text-muted mb-0">Agent 1</h5>
+                      <div class="row">
+                        <div class="col">
+                          <span id="predict1" class="h4 font-weight-bold mb-0">Прогноз: 0</span>
+                        </div>
+                        <div class="col">
+                          <span id="buy_from1" class="h4 font-weight-bold mb-0">Государство</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3"></div>
+                  <div class="row">
+                    <div class="col">
+                      <span id="tenge1" class="h4 font-weight-bold mb-0">USD: 11000000</span>
+                    </div>
+                    <div class="col">
+                      <span id="usd1" class="h4 font-weight-bold mb-0">GAZP: 0</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <p class="mt-3 mb-0 text-muted text-sm">
+                        <span id="buy1" class="text-success mr-2"><i class="fa fa-arrow-up"></i> 0</span>
+                        <!-- <span class="text-nowrap">Since yesterday</span> -->
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p class="mt-3 mb-0 text-muted text-sm">
+                        <span id="diff1" class="text-success mr-2"></i> 0</span>
+                        <!-- <span class="text-nowrap">Since yesterday</span> -->
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="h3 card-title text-uppercase text-muted mb-0">Agent 2</h5>
+                      <div class="row">
+                        <div class="col">
+                          <span id="predict2" class="h4 font-weight-bold mb-0">Прогноз: 0</span>
+                        </div>
+                        <div class="col">
+                          <span id="buy_from2" class="h4 font-weight-bold mb-0">Государство</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3"></div>
+                  <div class="row">
+                    <div class="col">
+                      <span id="tenge2" class="h4 font-weight-bold mb-0">USD: 11000000</span>
+                    </div>
+                    <div class="col">
+                      <span id="usd2" class="h4 font-weight-bold mb-0">GAZP: 0</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <p class="mt-3 mb-0 text-muted text-sm">
+                        <span id="buy2" class="text-success mr-2"><i class="fa fa-arrow-up"></i> 0</span>
+                        <!-- <span class="text-nowrap">Since yesterday</span> -->
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p class="mt-3 mb-0 text-muted text-sm">
+                        <span id="diff2" class="text-success mr-2"></i> 0</span>
+                        <!-- <span class="text-nowrap">Since yesterday</span> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="h3 card-title text-uppercase text-muted mb-0">Agent 3</h5>
+                      <div class="row">
+                        <div class="col">
+                          <span id="predict3" class="h4 font-weight-bold mb-0">Прогноз: 0</span>
+                        </div>
+                        <div class="col">
+                          <span id="buy_from3" class="h4 font-weight-bold mb-0">Государство</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3"></div>
+                  <div class="row">
+                    <div class="col">
+                      <span id="tenge3" class="h4 font-weight-bold mb-0">USD: 11000000</span>
+                    </div>
+                    <div class="col">
+                      <span id="usd3" class="h4 font-weight-bold mb-0">GAZP: 0</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <p class="mt-3 mb-0 text-muted text-sm">
+                        <span id="buy3" class="text-success mr-2"><i class="fa fa-arrow-up"></i> 0</span>
+                        <!-- <span class="text-nowrap">Since yesterday</span> -->
+                      </p>
+                    </div>
+                    <div class="col">
+                      <p class="mt-3 mb-0 text-muted text-sm">
+                        <span id="diff3" class="text-success mr-2"></i> 0</span>
+                        <!-- <span class="text-nowrap">Since yesterday</span> -->
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 id="day" class="h3 card-title text-uppercase text-muted mb-0">День 0</h5>
+                      <span id="current" class="h4 font-weight-bold mb-0">Курс на сегодня: 0</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mb-3"></div>
+                  <div class="row">
+                    <div class="col">
+                      <span id="total1" class="h4 font-weight-bold mb-0">Agent1: 11000000</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <span id="total2" class="h4 font-weight-bold mb-0">Agent2: 11000000</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <span id="total3" class="h4 font-weight-bold mb-0">Agent3: 11000000</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row">
+        <div class="col-xl-12  mb-5 mb-xl-0">
+          <div class="card bg-gradient-default shadow">
+            <div class="card-header bg-transparent">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h6 class="text-uppercase text-light ls-1 mb-1">Overview</h6>
+                  <h2 class="text-white mb-0">Курс</h2>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <!-- Chart -->
+              <div class="chart">
+                <!-- Chart wrapper -->
+                <canvas id="chart-sales" class="chart-canvas"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4"></div>
+        <div class="col-xl-5" hidden="true">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">Social traffic</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Referral</th>
+                    <th scope="col">Visitors</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      Facebook
+                    </th>
+                    <td>
+                      1,480
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">60%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="60"
+                              aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Facebook
+                    </th>
+                    <td>
+                      5,480
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">70%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-success" role="progressbar" aria-valuenow="70"
+                              aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Google
+                    </th>
+                    <td>
+                      4,807
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">80%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-primary" role="progressbar" aria-valuenow="80"
+                              aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      Instagram
+                    </th>
+                    <td>
+                      3,678
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">75%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75"
+                              aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      twitter
+                    </th>
+                    <td>
+                      2,645
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">30%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30"
+                              aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core   -->
+  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="./assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
+  <!--   Argon JS   -->
+  <script src="./assets/js/argon-dashboard.js"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-dashboard-free"
+      });
+  </script>
+  <script>
+    let socket = new WebSocket("ws://127.0.0.1:8000/agent/ws/front/");
+    var salesChart = undefined;
+
+    socket.onopen = function (e) {
+      alert("Connection established");
+    };
+
+    socket.onmessage = function (event) {
+      var data = JSON.parse(event.data).message
+      
+      // salesChart.data.labels.splice(0, 1);
+      salesChart.data.datasets[0].data.splice(0, 1);
+
+
+      var current = Math.round(data[0].real_price * 100) / 100
+      var day = data[0].day
+
+      
+      // salesChart.data.labels.push(day.toString());
+      salesChart.data.datasets[0].data.push(current);
+
+      salesChart.update();
+
+      var predict1 = Math.round(data[0].prediction * 100) / 100
+      var tenge1 = Math.round(data[0].tenge * 100) / 100
+      var usd1 = Math.round(data[0].dollar * 100) / 100
+      var diff1 = Math.round((current - predict1) * 100) / 100
+      var buy1 = data[0].status == 'buy'
+      var total1 = Math.round((current*usd1 + tenge1)*100) / 100
+      var from_government1 = data[0].from_government
+      var predict2 = Math.round(data[1].prediction * 100) / 100
+      var tenge2 = Math.round(data[1].tenge * 100) / 100
+      var usd2 = Math.round(data[1].dollar * 100) / 100
+      var diff2 = Math.round((current - predict2) * 100) / 100
+      var buy2 = data[1].status == 'buy'
+      var total2 = Math.round((current*usd2 + tenge2)*100) / 100
+      var from_government2 = data[1].from_government
+
+      var predict3 = Math.round(data[2].prediction * 100) / 100
+      var tenge3 = Math.round(data[2].tenge * 100) / 100
+      var usd3 = Math.round(data[2].dollar * 100) / 100
+      var diff3 = Math.round((current - predict3) * 100) / 100
+      var buy3 = data[2].status == 'buy'
+      var total3 = Math.round((current*usd3 + tenge3)*100) / 100
+      var from_government3 = data[2].from_government
+
+      $('#predict1').text("Прогноз: " + predict1 + "");
+      $('#predict2').text("Прогноз: " + predict2 + "");
+      $('#predict3').text("Прогноз: " + predict3 + "");
+
+      if (from_government1){
+        $('#buy_from1').text("Государство");
+      }else{
+        $('#buy_from1').text(data[0].seller);
+      }
+      if (from_government2){
+        $('#buy_from2').text("Государство");
+      }else{
+        $('#buy_from2').text(data[1].seller);
+      }
+      if (from_government3){
+        $('#buy_from3').text("Государство");
+      }else{
+        $('#buy_from3').text(data[2].seller);
+      }
+
+      $('#tenge1').text("USD: " + tenge1 + "");
+      $('#tenge2').text("USD: " + tenge2 + "");
+      $('#tenge3').text("USD: " + tenge3 + "");
+
+      $('#usd1').text("GAZP: " + usd1);
+      $('#usd2').text("GAZP: " + usd2);
+      $('#usd3').text("GAZP: " + usd3);
+
+      $('#total1').text("Agent1: " + total1 + "")
+      $('#total2').text("Agent2: " + total2 + "")
+      $('#total3').text("Agent3: " + total3 + "")
+
+      if (buy1) {
+        $('#buy1').html('<i class="fa fa-arrow-up"></i> ' + Math.round(data[0].quantity * 100) / 100)
+      } else {
+        $('#buy1').html('<i class="fa fa-arrow-down"></i> ' + 0)
+      }
+
+      if (buy2) {
+        $('#buy2').html('<i class="fa fa-arrow-up"></i> ' + Math.round(data[1].quantity * 100) / 100)
+      } else {
+        $('#buy2').html('<i class="fa fa-arrow-down"></i> ' + 0)
+      }
+
+      if (buy3) {
+        $('#buy3').html('<i class="fa fa-arrow-up"></i> ' + Math.round(data[2].quantity * 100) / 100)
+      } else {
+        $('#buy3').html('<i class="fa fa-arrow-down"></i >' + 0)
+      }
+
+      $('#day').text("День " + day);
+      $('#current').text("Курс на сегодня: " + current);
+
+      if (diff1 > 0) {
+        $('#diff1').addClass('text-success').removeClass('text-danger').text(Math.round(diff1 * 100) / 100)
+      } else {
+        $('#diff1').addClass('text-danger').removeClass('text-success').text(Math.round(diff1 * 100) / 100)
+      }
+
+      if (diff2 > 0) {
+        $('#diff2').addClass('text-success').removeClass('text-danger').text(Math.round(diff2 * 100) / 100)
+      } else {
+        $('#diff2').addClass('text-danger').removeClass('text-success').text(Math.round(diff2 * 100) / 100)
+      }
+
+      if (diff3 > 0) {
+        $('#diff3').addClass('text-success').removeClass('text-danger').text(Math.round(diff3 * 100) / 100)
+      } else {
+        $('#diff3').addClass('text-danger').removeClass('text-success').text(Math.round(diff3 * 100) / 100)
+      }
+
+    };
+
+    socket.onclose = function (event) {
+      if (event.wasClean) {
+        alert(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+      } else {
+        // e.g. server process killed or network down
+        // event.code is usually 1006 in this case
+        alert('[close] Connection died');
+      }
+    };
+
+    socket.onerror = function (error) {
+      alert(`[error] ${error.message}`);
+    };
+
+
+
+    var $chart = $('#chart-sales');
+
+    // Methods
+
+    function init($chart) {
+
+      salesChart = new Chart($chart, {
+        type: 'line',
+        options: {
+          scales: {
+            yAxes: [{
+              gridLines: {
+                lineWidth: 1,
+                color: Charts.colors.gray[900],
+                zeroLineColor: Charts.colors.gray[900]
+              },
+              ticks: {
+                callback: function (value) {
+                  if (!(value % 10)) {
+                    return value + '';
+                  }
+                }
+              }
+            }]
+          },
+          tooltips: {
+            callbacks: {
+              label: function (item, data) {
+                var label = data.datasets[item.datasetIndex].label || '';
+                var yLabel = item.yLabel;
+                var content = '';
+
+                if (data.datasets.length > 1) {
+                  content += '<span class="popover-body-label mr-auto">' + label + '-день</span>';
+                }
+
+                content += '<span class="popover-body-value">' + yLabel + '</span>';
+                return content;
+              }
+            }
+          }
+        },
+        data: {
+          labels: Array.from({ length: 8 }).fill(''),
+          datasets: [{
+            label: 'Performance',
+            data: [100, 110, 120, 150, 180, 200, 250, 280]
+          }]
+        }
+      });
+
+      // Save to jQuery object
+
+      $chart.data('chart', salesChart);
+
+    };
+    // Events
+
+    if ($chart.length) {
+      init($chart);
+    }
+
+    $.get("http://127.0.0.1:8000/main/rates/1/", function (resp) {
+      var chart_data = [];
+      var chart_label = Array.from({ length: 360 }).fill('');
+      resp.forEach(element => {
+        chart_data.push(element.usd);
+        // chart_label.push(element.id.toString());
+      });
+      salesChart.data.labels = chart_label;
+      salesChart.data.datasets[0].data = chart_data;
+      // salesChart.data.datasets[0].data.splice(0, 1)
+      salesChart.update()
+    })
+  </script>
+</body>
+
+</html>
